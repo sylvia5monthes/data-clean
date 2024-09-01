@@ -1,7 +1,7 @@
 ---
 title: 'STA 325: Homework 1'
 author: "Connie Xu"
-date: "`r Sys.Date()`"
+date: "September 3, 2024"
 output: pdf_document
 ---
 
