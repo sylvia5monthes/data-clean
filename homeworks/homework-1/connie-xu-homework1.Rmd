@@ -154,7 +154,7 @@ y <- c("5",7,12)
 y
 ```
 
-This command assigns variable y to a character vector containing "5", "7", and "12". R implicitly coerces the integers to be of type character. 
+This command assigns variable y to a character vector containing "5", "7", and "12". R implicitly coerces the numeric values 7 and 12 to be of type character. 
 
 ```
 y[2] + y[3]
