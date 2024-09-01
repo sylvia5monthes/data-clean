@@ -100,13 +100,14 @@ The histogram cannot possibly be right because the daily rainfall amount cannot 
 
 j.
 ```{r 1j, message = F}
-# change negative values to zero 
-rain_df$daily_rain_fall <- rowSums(replace(rain_df[4:27], 
-                                           rain_df[4:27] < 0, 
-                                           0))
+# Replace negative values with NA
+rain_df[rain_df < 0] <- NA
+
+# Calculate daily rainfall, ignoring NA values
+rain_df$daily_rain_fall <- rowSums(rain_df[4:27], na.rm = TRUE)
 ```
 
-This command changes any negative values in the 4th to 27th columns to zero. 
+This command replaces any negative values in the 4th to 27th columns with NA and ignores them during calculations for daily rain fall.  
 
 k. 
 ```{r 1k, message = F}
